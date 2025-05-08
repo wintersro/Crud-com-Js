@@ -92,7 +92,7 @@ Se houver muitos registros, eles são divididos automaticamente em páginas para
 
 ## 👨‍💻 Autor
 
-Desenvolvido por [Seu Nome](https://github.com/wintersro)  
+Desenvolvido por [Winter Sro](https://github.com/wintersro)  
 📧 wintersantosrosa@gmail.com
 
 ---
