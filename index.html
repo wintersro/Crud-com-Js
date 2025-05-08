@@ -13,9 +13,9 @@
 
 <body>
     <div class="header-container"></div>
-        <h1 class="titulo-principal">🛠️ CRUD com JS
-            <button onclick="apagarTudo()" class="btn-apagar-tudo"><i class="fas fa-trash"></i> Deletar</button>
-        </h1>
+    <h1 class="titulo-principal">🛠️ CRUD com JS
+        <button onclick="apagarTudo()" class="btn-apagar-tudo"><i class="fas fa-trash"></i> Deletar</button>
+    </h1>
     </div>
     <div class="container-flex">
         <tr>
@@ -39,23 +39,27 @@
                     </div>
                     <div>
                         <label for="busca">Busca</label>
-                        <input type="text" name="busca" id="filtro" placeholder="🔍 Buscar por nome..." oninput="filtrarTabela()">
+                        <input type="text" name="busca" id="filtro" placeholder="🔍 Buscar por nome..."
+                            oninput="filtrarTabela()">
                     </div>
                     <div class="form_action--button">
                         <button class="btn-salvar"><i class="fas fa-save"></i> Salvar</button>
                         <button class="btn-limpar" type="button" onclick="limparFormularioComConfirmacao()"><i
                                 class="fas fa-broom"></i> Limpar</button>
-                        <button type="button" class="btn-exportar" onclick="exportarParaCSV()"><i class="fas fa-download"></i> Exportar CSV
+                        <button type="button" class="btn-exportar" onclick="exportarParaCSV()"><i
+                                class="fas fa-download"></i> Exportar CSV
                         </button>
                     </div>
                 </form>
             </td>
+            
             <td>
                 <div class="tabela-container">
                     <table class="list" id="listaEmpregados">
                         <thead>
                             <tr>
-                                <th onclick="ordenarPorNome()" style="cursor: pointer;">Nome Completo <i class="fa-solid fa-sort-down"></i></th>
+                                <th onclick="ordenarPorNome()" style="cursor: pointer;">Nome Completo <i
+                                        class="fa-solid fa-sort-down"></i></th>
                                 <th>Idade</th>
                                 <th>Salário</th>
                                 <th>Cidade</th>

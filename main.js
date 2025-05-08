@@ -28,9 +28,9 @@ function lerDados() {
 // Validar que todos os campos foram preenchidos
 function validarCampos(data) {
     return data.nomeComp.trim() !== "" &&
-           data.idade.trim() !== "" &&
-           data.salario.trim() !== "" &&
-           data.cidade.trim() !== "";
+        data.idade.trim() !== "" &&
+        data.salario.trim() !== "" &&
+        data.cidade.trim() !== "";
 }
 
 //Controle de páginas - Paginação
@@ -62,10 +62,11 @@ function atualizarPaginacao() {
         container.appendChild(btn);
     }
 }
+
 // Atualiza após adicionar/remover linha
 function atualizarTabelaComPaginacao() {
     atualizarPaginacao();
-    salvarNoLocalStorage(); 
+    salvarNoLocalStorage();
 }
 
 // Cria a a tabela de dados inseridos
@@ -103,7 +104,7 @@ function limparFormulario() {
         selectedRow = null;
     }
 }
-function limparCampos(){
+function limparCampos() {
     document.getElementById('nomeComp').value = '';
     document.getElementById('idade').value = '';
     document.getElementById('salario').value = '';
@@ -161,8 +162,8 @@ function filtrarTabela() {
 function apagarTudo() {
     if (confirm("Tem certeza que deseja DELETAR todos os dados?")) {
         const tabela = document.getElementById("listaEmpregados").getElementsByTagName('tbody')[0];
-        tabela.innerHTML = ''; 
-        localStorage.removeItem("empregados"); 
+        tabela.innerHTML = '';
+        localStorage.removeItem("empregados");
         selectedRow = null;
         apagaDadosForm();
     }
@@ -203,6 +204,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+//Ordena a coluna nome por ordem alfabéfica
 function ordenarPorNome() {
     const tbody = document.querySelector("#listaEmpregados tbody");
     const linhas = Array.from(tbody.querySelectorAll("tr"));
@@ -215,9 +217,8 @@ function ordenarPorNome() {
 
     linhas.forEach(linha => tbody.appendChild(linha));
 
-    salvarNoLocalStorage(); // Atualiza o localStorage com a nova ordem
+    salvarNoLocalStorage(); 
 }
-
 
 //Armazena todos os dados no Local Storage
 function carregarDoLocalStorage() {
@@ -244,8 +245,7 @@ function salvarNoLocalStorage() {
 
     localStorage.setItem("empregados", JSON.stringify(dados));
 }
-  
+
 carregarDoLocalStorage();
 
 atualizarTabelaComPaginacao();
-
